@@ -4,13 +4,11 @@
     $playlistId = $_POST['playlistId'];
     $songId = $_POST['songId'];
 
-    $orderIdQuery = mysqli_query($con, "SELECT IFNULL(MAX(playlist_order) + 1, 1) as playlist_order FROM playlist_songs WHERE playlist_id='$playlistId'");
-    $row = mysqli_fetch_array($orderIdQuery);
-    $order = $row['playlist_order'];
+    $query = mysqli_query($con, "DELETE FROM playlist_songs WHERE playlist_id='$playlistId' AND song_id='$songId' LIMIT 1");
 
-    $query = mysqli_query($con, "INSERT INTO playlist_songs VALUES('', '$songId', '$playlistId', '$order')");
   } else {
-    echo "PlaylistId or songId was not passed into addToPlaylist.php";
+    echo "Playlist id or songId was not passed into removeFromPlaylist.php";
+    exit();
   }
 
 ?>

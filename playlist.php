@@ -18,10 +18,10 @@
     </div>
   </div>
   <div class="right-section">
-    <h2><?php echo $playlist->getName(); ?></h2>
+    <h2 class="playlist-name"><?php echo $playlist->getName(); ?></h2>
     <p>by <?php echo $playlist->getOwner(); ?></p>
     <p><?php echo $playlist->getSongCount() . " " . ngettext("track", "tracks", $playlist->getSongCount()); ?></p>
-    <button onClick="deletePlaylist('<?php echo $playlistId; ?>')">Delete Playlist</button>
+    <button class="button" onClick="deletePlaylist('<?php echo $playlistId; ?>')">Delete Playlist</button>
   </div>
 </div>
 <div class="tracks-container">
@@ -57,7 +57,6 @@
 
     <script>
       var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
-      console.log(tempSongIds);
       tempPlaylist = JSON.parse(tempSongIds);
     </script>
   </ul>

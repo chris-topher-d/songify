@@ -138,6 +138,33 @@ function showOptionsMenu(button) {
   menu.css({ "top": top + "px", "left": left + "px", "display": "inline" })
 }
 
+function updateEmail(emailClass) {
+  let emailValue = $("." + emailClass).val();
+
+  $.post("includes/handlers/ajax/updateEmail.php", { email: emailValue, username: userLoggedIn })
+  .done(function(response) {
+    $("." + emailClass).nextAll(".message").text(response);
+  });
+}
+
+function updatePassword(oldPasswordClass, newPasswordClass, verifiedPasswordClass) {
+  let oldPassword = $("." + oldPasswordClass).val();
+  let newPassword = $("." + newPasswordClass).val();
+  let verifiedPassword = $("." + verifiedPasswordClass).val();
+
+  $.post("includes/handlers/ajax/updatePassword.php",
+  { oldPassword: oldPassword, newPassword: newPassword, verifiedPassword: verifiedPassword, username: userLoggedIn })
+  .done(function(response) {
+    $("." + oldPasswordClass).nextAll(".message").text(response);
+  });
+}
+
+function logout() {
+  $.post("includes/handlers/ajax/logout.php", function() {
+    location.reload();
+  });
+}
+
 function Audio() {
 
   // currentlyPlaying is referenced when playSong() is called from nowPlayingBar.php

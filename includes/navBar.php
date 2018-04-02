@@ -1,7 +1,7 @@
 <nav class="nav-bar">
   <div class="logo" role="link" tabindex="0" onClick="openPage('index.php')">
     <i class="fas fa-headphones"></i>
-    <h2>Songify</h2>
+    <h3>Songify</h3>
   </div>
   <div class="search">
     <div class="nav-item">
@@ -17,7 +17,7 @@
       <span class="nav-link" role="link" tabindex="0" onClick="openPage('yourMusic.php')">Your Music</span>
     </div>
     <div class="nav-item">
-      <span class="nav-link" role="link" tabindex="0" onClick="openPage('navItemLink.php')">User</span>
+      <span class="nav-link" role="link" tabindex="0" onClick="openPage('settings.php')"><?php echo $userLoggedIn->getUsername(); ?></span>
     </div>
   </div>
 </nav>

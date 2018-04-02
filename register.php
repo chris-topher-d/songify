@@ -18,6 +18,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon_headphones.png">
     <title>Login/Register</title>
     <link rel="stylesheet" href="assets/css/register.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>

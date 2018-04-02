@@ -1,0 +1,47 @@
+// used for:
+// album.php
+// artist.php
+// playlist.php
+// search.php
+
+
+.options-menu {
+  display: none;
+  position: fixed;
+  background: #282828;
+  width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  z-index: 100;
+
+  .song-id {
+
+  }
+
+  .item {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(147, 147, 147, 0.8);
+    background: #282828;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background: #333;
+      border-color: #333;
+    }
+  }
+
+  .item.playlist {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  select {
+
+  }
+}

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #282828;
+}
+
+.main-container {
+  height: calc(100vh - 120px);
+  margin-top: 60px;
+
+  .top-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    background: #234560;
+
+    // nav-bar here
+
+    .main-view-content {
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      min-width: 700px;
+      padding-bottom: 60px;
+      background: #141414;
+
+      // CONTENT LOADS INSIDE MAIN-CONTENT
+      .main-content {
+        // display: flex;
+        // justify-content: center;
+        width: 100%;
+        min-width: 700px;
+        color: #fff;
+        padding: 0 20px;
+
+        h2 {
+          margin: 40px 15px 20px 15px;
+        }
+      }
+    }
+  }
+
+  // controls-footer here
+
+}

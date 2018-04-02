@@ -1,0 +1,136 @@
+.album-info-top {
+  display: flex;
+  width: 100%;
+  padding: 40px 0 10px 0;
+
+  .left-section {
+    width: 30%;
+    max-width: 250px;
+
+    img {
+      width: 100%;
+    }
+
+    .playlist-icon{
+      border: 3px solid #282828;
+      padding: 10px;
+    }
+  }
+
+  .right-section {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 70%;
+    padding:  5px 10px 5px 40px;
+    box-sizing: border-box;
+
+    .playlist-name {
+      margin: 0 0 20px 0 !important;
+      padding: 0;
+    }
+
+    p {
+      color: #909090;
+      padding: 10px 0;
+    }
+
+    .button {
+      @extend %button;
+      margin: 15px 0 0 0;
+    }
+  }
+}
+
+.tracks-container {
+  display: flex;
+  width: 100%;
+  padding: 30px 0 10px 0;
+
+  .track-list {
+    width: 100%;
+    padding: 0;
+
+    .track-list-row {
+      display: inline-grid;
+      grid-template-columns: .5fr 4fr 1fr 1fr;
+      width: 100%;
+      list-style: none;
+      height: 40px;
+      padding: 15px 10px;
+
+      &:hover {
+        background: #2a2a2a;
+
+        .track-count .track-number {
+          visibility: hidden;
+        }
+
+        .track-count .fa-play {
+          visibility: visible;
+        }
+
+        .track-options {
+
+          .fa-ellipsis-h {
+            visibility: visible;
+          }
+        }
+      }
+
+      .track-count {
+        font-size: 15px;
+        padding-right: 10px;
+
+        .fa-play {
+          visibility: hidden;
+          position: absolute;
+          cursor: pointer;
+        }
+
+        .track-number {
+          color: #909090;
+          cursor: pointer;
+        }
+      }
+
+      .track-info {
+        display: flex;
+        flex-direction: column;
+
+        .track-name {
+          font-size: 15px;
+        }
+
+        .artist-name {
+          font-size: 13px;
+          color: #909090;
+          padding: 5px 0;
+        }
+      }
+
+      .track-options {
+
+
+        .fa-ellipsis-h {
+          visibility: hidden;
+          float: right;
+          cursor: pointer;
+        }
+      }
+
+      .track-length {
+        color: #909090;
+
+        .duration {
+          float: right;
+          font-size: 15px;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+// options-menu

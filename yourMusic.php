@@ -5,9 +5,6 @@
 <div class="playlist-container">
   <div class="grid-container">
     <h2>Your Playlists</h2>
-    <!-- <div class="buttons">
-      <button class"button" onClick="createPlaylist('asdf')">New Playlist</button>
-    </div> -->
     <div class="playlist-results">
     <?php
       $username = $userLoggedIn->getUsername();

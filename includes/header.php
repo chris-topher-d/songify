@@ -1,14 +1,17 @@
 <?php
   require("includes/config.php");
+  require("includes/classes/User.php");
   require("includes/classes/Artist.php");
   require("includes/classes/Album.php");
   require("includes/classes/Song.php");
+  require("includes/classes/Playlist.php");
 
   // session_destroy(); manual logout
 
   if (isset($_SESSION['userLoggedIn'])) {
-    $userLoggedIn = $_SESSION['userLoggedIn'];
-    echo "<script>userLoggedIn = '$userLoggedIn';</script>";
+    $userLoggedIn = new User($con, $_SESSION['userLoggedIn']);
+    $username = $userLoggedIn->getUsername();
+    echo "<script>userLoggedIn = '$username';</script>";
   } else {
     header("Location: register.php");
   }
@@ -18,6 +21,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="./favicon_headphones.png">
     <title>Songify</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>

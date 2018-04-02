@@ -1,0 +1,159 @@
+.entity-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  min-width: 600px;
+
+  .artist-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    width: 100%;
+    border-bottom: 1px solid #909090;
+
+    .name {
+      color: orange;
+      margin-bottom: 15px;
+    }
+
+    .header-buttons {
+
+      .button {
+        @extend %button-wide;
+      }
+    }
+  }
+
+  .center-container {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+
+    // ARTIST albums
+    .artist-albums {
+      width: 30%;
+      min-width: 250px;
+
+      .artist-albums-title {
+        margin: 0 !important;
+      }
+
+      .grid-item {
+        padding: 20px 0;
+
+        span {
+          cursor: pointer;
+
+          img {
+            max-width: 200px;
+          }
+
+          .grid-item-info {
+            font-size: 15px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+
+    // ARTIST tracks
+    .tracks-container {
+      display: flex;
+      width: 70%;
+      padding: 0;
+
+      .track-list {
+        width: 100%;
+        padding: 0;
+        min-width: 350px;
+
+        h2 {
+          padding: 0;
+          margin: 0;
+        }
+
+        .track-list-row {
+          display: inline-grid;
+          grid-template-columns: .5fr 4fr 1fr 1fr;
+          width: 100%;
+          list-style: none;
+          height: 40px;
+          padding: 15px 10px;
+
+          &:hover {
+            background: #2a2a2a;
+
+            .track-count .track-number {
+              visibility: hidden;
+            }
+
+            .track-count .fa-play {
+              visibility: visible;
+            }
+
+            .track-options {
+
+              .fa-ellipsis-h {
+                visibility: visible;
+              }
+            }
+          }
+
+          .track-count {
+            font-size: 15px;
+            padding-right: 10px;
+
+            .fa-play {
+              visibility: hidden;
+              position: absolute;
+              cursor: pointer;
+            }
+
+            .track-number {
+              color: #909090;
+              cursor: pointer;
+            }
+          }
+
+          .track-info {
+            display: flex;
+            flex-direction: column;
+
+            .track-name {
+              font-size: 15px;
+            }
+
+            .album-name {
+              font-size: 13px;
+              color: #909090;
+              padding: 5px 0;
+            }
+          }
+
+          .track-options {
+
+            .fa-ellipsis-h {
+              visibility: hidden;
+              float: right;
+              cursor: pointer;
+            }
+          }
+
+          .track-length {
+            color: #909090;
+
+            .duration {
+              float: right;
+              font-size: 15px;
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// options-menu
