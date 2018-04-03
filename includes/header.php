@@ -6,8 +6,6 @@
   require("includes/classes/Song.php");
   require("includes/classes/Playlist.php");
 
-  // session_destroy(); manual logout
-
   if (isset($_SESSION['userLoggedIn'])) {
     $userLoggedIn = new User($con, $_SESSION['userLoggedIn']);
     $username = $userLoggedIn->getUsername();

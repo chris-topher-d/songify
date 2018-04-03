@@ -1,14 +1,14 @@
 $(document).ready(function() {
-  $(".newUser").hide();
-  $(".returningUser").show();
+  $(".new-user").hide();
+  $(".returning-user").show();
 
-  $("#hideLogin").click(function() {
-    $(".returningUser").hide();
-    $(".newUser").show();
+  $("#hide-login").click(function() {
+    $(".returning-user").hide();
+    $(".new-user").show();
   });
 
-  $("#hideRegister").click(function() {
-    $(".newUser").hide();
-    $(".returningUser").show();
+  $("#hide-register").click(function() {
+    $(".new-user").hide();
+    $(".returning-user").show();
   });
 });

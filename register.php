@@ -21,8 +21,9 @@
     <link rel="shortcut icon" href="favicon_headphones.png">
     <title>Login/Register</title>
     <link rel="stylesheet" href="assets/css/register.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/solid.js" integrity="sha384-P4tSluxIpPk9wNy8WSD8wJDvA8YZIkC6AQ+BfAFLXcUZIPQGu4Ifv4Kqq+i2XzrM" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/regular.js" integrity="sha384-BazKgf1FxrIbS1eyw7mhcLSSSD1IOsynTzzleWArWaBKoA8jItTB5QR+40+4tJT1" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/register.js"></script>
   </head>
@@ -32,8 +33,8 @@
       if (isset($_POST['regButton'])) {
         echo '<script type="text/javascript">
                 $(document).ready(function() {
-                  $(".returningUser").hide();
-                  $(".newUser").show();
+                  $(".returning-user").hide();
+                  $(".new-user").show();
                 });
               </script>';
       }
@@ -41,79 +42,73 @@
 
     <div class='container'>
       <div class='info'>
-        <div class="returningUser">
+        <div class="returning-user">
           <form class="login" action="register.php" method="post">
             <h2>Sign in to your account</h2>
             <p>
               <?php echo $account->getError(Constants::$loginFailed); ?>
-              <label for="loginUsername">Username</label>
-              <input class="loginUsername" type="text" name="loginUsername" placeholder="Your username" value="<?php getInputValue('loginUsername'); ?>" required>
+              <input class="loginUsername" type="text" name="loginUsername" placeholder="Username" value="<?php getInputValue('loginUsername'); ?>" required>
             </p>
             <p>
-              <label for="loginPassword">Password</label>
-              <input class="loginPassword" type="password" name="loginPassword" placeholder="Your password" required>
+              <input class="loginPassword" type="password" name="loginPassword" placeholder="Password" required>
             </p>
             <button type="submit" name="loginButton">Log In</button>
-            <div class="newAccount">
-              <span id="hideLogin">Don't have an account? Sign up here.</span>
+            <div class="new-account">
+              <span id="hide-login">Don't have an account? Sign up here.</span>
             </div>
           </form>
         </div>
 
-        <div class="newUser">
+        <div class="new-user">
           <form class="register" action="register.php" method="post">
             <h2>Create your free account</h2>
             <p>
               <?php echo $account->getError(Constants::$usernameLength); ?>
               <?php echo $account->getError(Constants::$usernameTaken); ?>
-              <label for="username">Username</label>
-              <input class="username" type="text" name="username" placeholder="Your username" value="<?php getInputValue('username'); ?>" required>
+              <input class="username" type="text" name="username" placeholder="Enter username" value="<?php getInputValue('username'); ?>" required>
             </p>
             <p>
               <?php echo $account->getError(Constants::$firstNameLength); ?>
-              <label for="firstName">First Name</label>
               <input class="firstName" type="text" name="firstName" placeholder="Your first name" value="<?php getInputValue('firstName'); ?>" required>
             </p>
             <p>
               <?php echo $account->getError(Constants::$lastNameLength); ?>
-              <label for="lastName">Last Name</label>
               <input class="lastName" type="text" name="lastName" placeholder="Your last name" value="<?php getInputValue('lastName'); ?>" required>
             </p>
             <p>
               <?php echo $account->getError(Constants::$emailInvalid); ?>
               <?php echo $account->getError(Constants::$emailsDontMatch); ?>
               <?php echo $account->getError(Constants::$emailTaken); ?>
-              <label for="email">Email</label>
-              <input class="email" type="email" name="email" placeholder="e.g. you@gmail.com" value="<?php getInputValue('email'); ?>" required>
+              <input class="email" type="email" name="email" placeholder="Your email address" value="<?php getInputValue('email'); ?>" required>
             </p>
             <p>
-              <label for="emailConfirm">Confirm Email Address</label>
-              <input class="emailConfirm" type="email" name="emailConfirm" placeholder="e.g. you@gmail.com" value="<?php getInputValue('emailConfirm'); ?>" required>
+              <input class="emailConfirm" type="email" name="emailConfirm" placeholder="Confirm email address" value="<?php getInputValue('emailConfirm'); ?>" required>
             </p>
             <p>
               <?php echo $account->getError(Constants::$pwInvalid); ?>
               <?php echo $account->getError(Constants::$pwLength); ?>
               <?php echo $account->getError(Constants::$pwsDontMatch); ?>
-              <label for="password">Password</label>
-              <input class="password" type="password" name="password" placeholder="Your Password" required>
+              <input class="password" type="password" name="password" placeholder="Your password" required>
             </p>
             <p>
-              <label for="passwordConfirm">Confirm Password</label>
-              <input class="passwordConfirm" type="password" name="passwordConfirm" placeholder="Your Password" required>
+              <input class="passwordConfirm" type="password" name="passwordConfirm" placeholder="Confirm password" required>
             </p>
             <button type="submit" name="regButton">Sign Up</button>
-            <div class="newAccount">
-              <span id="hideRegister">Already have an account? Log in here.</span>
+            <div class="new-account">
+              <span id="hide-register">Already have an account? Log in here.</span>
             </div>
           </form>
         </div>
-        <div class='loginText'>
-          <h1>Your music right now</h1>
-          <h2>Stream your favorite tunes for free</h2>
+        <div class='login-text'>
+          <div class="logo-name">
+            <i class="fas fa-headphones"></i>
+            <h1>Songify</h1>
+          </div>
+          <h2>Stream your favorite music for free</h2>
           <ul>
-            <li><i class="fas fa-check"></i>Discover music you'll fall in love with</li>
+            <li><i class="fas fa-check"></i>Discover new music</li>
             <li><i class="fas fa-check"></i>Create your own playlists</li>
-            <li><i class="fas fa-check"></i>Follow artists to keep up to date</li>
+            <li><i class="fas fa-check"></i>Follow artists</li>
           </ul>
         </div>
       </div>
