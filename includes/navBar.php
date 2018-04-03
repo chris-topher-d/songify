@@ -1,13 +1,32 @@
+<?php $term = ""; ?>
+
 <nav class="nav-bar">
   <div class="logo" role="link" tabindex="0" onClick="openPage('index.php')">
     <i class="fas fa-headphones"></i>
     <h3>Songify</h3>
   </div>
   <div class="search">
-    <div class="nav-item">
-      <span class="nav-link" role="link" tabindex="0" onClick="openPage('search.php')">Search</span>
+    <span class="search-container">
+      <input type="text" class="search-input" value="<?php echo $term; ?>" onfocus=" var temp_val=this.value; this.value = ''; this.value=temp_val" placeholder="Search">
       <i class="fas fa-search"></i>
-    </div>
+    </span>
+
+    <script>
+      // keeps search field active
+      $(".search-input").focus();
+
+      // auto searches 1.5 seconds after typing has stopped
+      $(function() {
+        $(".search-input").keyup(function() {
+          clearTimeout(timer);
+          var input = $('.search-input').val();
+          timer = setTimeout(function() {
+            openPage("search.php?term=" + input);
+          }, 1500);
+        });
+      });
+    </script>
+
   </div>
   <div class="nav-items">
     <div class="nav-item">

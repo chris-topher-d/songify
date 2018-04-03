@@ -46,7 +46,7 @@ function openPage(url) {
   var encodedUrl = encodeURI(url + "&userLoggedIn=" + userLoggedIn);
   $('.main-content').load(encodedUrl);
   $('body').scrollTop(0);
-
+  
   // changes url in address bar when page is changed
   history.pushState(null, null, url);
 }

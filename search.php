@@ -10,29 +10,20 @@
 
 ?>
 
-<div class="search-container">
-  <h4>Search for an artist, album, or song</h4>
-  <input type="text" class="search-input" value="<?php echo $term; ?>" onfocus=" var temp_val=this.value; this.value = ''; this.value=temp_val" placeholder="Start typing...">
-</div>
+<!-- if search field is empty, no results are shown -->
+<?php
+  if ($term === "") {
+    echo "<h2>No results</h2>";
+    exit();
+  }
+?>
 
 <script>
-  // keeps search field active
-  $(".search-input").focus();
-
-  // auto searches 1.5 seconds after typing has stopped
-  $(function() {
-    $(".search-input").keyup(function() {
-      clearTimeout(timer);
-      var input = $('.search-input').val();
-      timer = setTimeout(function() {
-        openPage("search.php?term=" + input);
-      }, 1500);
-    });
-  });
+  // clears the search bar
+  function clearTerm() {
+    $('.search-input').val("");
+  }
 </script>
-
-<!-- if search field is empty, no results are shown -->
-<?php if ($term === "") exit(); ?>
 
 <div class="tracks-container">
   <ul class="track-list">
@@ -98,7 +89,7 @@
       $artistAlbumTotal = count($artistResult->getAlbumIds()) . " " . ngettext("album", "albums", count($artistResult->getAlbumIds()));
       $artistTrackTotal = count($artistResult->getSongIds()) . " " . ngettext("track", "tracks", count($artistResult->getSongIds()));
 
-      echo "<div class='artist-result-row' role='link' tabindex='0' onClick='openPage(\"artist.php?id={$artistResult->getId()}\")'>
+      echo "<div class='artist-result-row' role='link' tabindex='0' onClick='openPage(\"artist.php?id={$artistResult->getId()}\"); clearTerm();'>
             <span class='artist-info'>
               <span class='artist-name'>{$artistResult->getName()}</span>
               <p class='album-track-count'>{$artistAlbumTotal}, {$artistTrackTotal}</p>
@@ -121,7 +112,7 @@
 
       while ($row = mysqli_fetch_array($albumQuery)) {
         echo "<div class='grid-item'>
-                <span role='link' tabindex='0' onClick='openPage(\"album.php?id={$row['id']}\")'>
+                <span role='link' tabindex='0' onClick='openPage(\"album.php?id={$row['id']}\"); clearTerm();'>
                   <img src='{$row['artwork']}' alt='album cover'>
                   <div class='grid-item-info'>
                     {$row['title']}

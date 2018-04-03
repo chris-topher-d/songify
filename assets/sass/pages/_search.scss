@@ -35,9 +35,6 @@
     .track-list-row {
       display: inline-grid;
       grid-template-columns: .5fr 4fr 1fr 1fr;
-      // grid-column-start: 1;
-      // grid-column-end: 6;
-      // justify-content: start;
       width: 100%;
       list-style: none;
       height: 40px;
@@ -168,7 +165,6 @@
       padding: 15px;
 
       span {
-        // text-decoration: none;
         color: #fff;
         cursor: pointer;
 

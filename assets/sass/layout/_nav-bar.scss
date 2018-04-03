@@ -12,7 +12,7 @@
   .logo {
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     cursor: pointer;
 
     .fa-headphones {
@@ -28,27 +28,32 @@
 
   .search {
 
-    .nav-item {
+    .search-container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      width: 100%;
+      background: #141414;
+      border-radius: 100px;
+      padding: 5px 10px;
 
-      .nav-link {
+      .search-input {
+        width: 100%;
+        background: transparent;
+        border: none;
         color: #fff;
-        padding: 0 15px;
-        cursor: pointer;
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding: 0 5px;
 
-        &:hover {
-          color: orange;
+        &:focus {
+          outline: none;
         }
       }
 
       .fa-search {
-        font-size: 20px;
+        padding: 0 5px;
+        font-size: 15px;
         color: #909090;
       }
     }
