@@ -8,6 +8,7 @@
   width: 70%;
   min-width: 700px;
   height: 60px;
+  border-bottom: 1px solid #46414C;
 
   .logo {
     display: flex;
@@ -74,6 +75,10 @@
         text-decoration: none;
         color: #fff;
         cursor: pointer;
+
+        &.user {
+          color: #58b5ff;
+        }
 
         &:hover {
           color: orange;

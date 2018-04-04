@@ -36,7 +36,7 @@
       <span class="nav-link" role="link" tabindex="0" onClick="openPage('yourMusic.php')">Your Music</span>
     </div>
     <div class="nav-item">
-      <span class="nav-link" role="link" tabindex="0" onClick="openPage('settings.php')"><?php echo $userLoggedIn->getUsername(); ?></span>
+      <span class="nav-link user" role="link" tabindex="0" onClick="openPage('settings.php')"><?php echo $userLoggedIn->getUsername(); ?></span>
     </div>
   </div>
 </nav>

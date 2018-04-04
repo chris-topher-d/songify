@@ -14,7 +14,7 @@
 <div class="album-info-top">
   <div class="left-section">
     <div class="playlist-icon">
-      <img src="assets/images/icons/playlist.png">
+      <img src="assets/images/icons/playlist_orange.png">
     </div>
   </div>
   <div class="right-section">

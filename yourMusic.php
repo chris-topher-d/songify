@@ -14,7 +14,7 @@
         $playlist = new Playlist($con, $row);
         echo "<div class='grid-item' role='link' tabindex='0' onClick='openPage(\"playlist.php?id={$playlist->getId()}\")'>
                 <div class='playlist-image'>
-                  <img src='assets/images/icons/playlist.png' alt='playlist-icon'>
+                  <img src='assets/images/icons/playlist_orange.png' alt='playlist-icon'>
                 </div>
                 <div class='grid-item-info'>
                   {$playlist->getName()}
