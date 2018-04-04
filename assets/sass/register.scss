@@ -5,14 +5,16 @@
 
 body {
   height: 100%;
+  width: 100%;
   background: #222;
+  background: url('../images/concert_audience.jpg') center no-repeat;
+  background-size: cover;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #222;
   height: 100vh;
   color: #fff;
   font-family: Helvetica, Arial, sans-serif;
@@ -20,9 +22,9 @@ body {
   .info {
     display: flex;
     align-items: center;
-    background: #234560;
+    background: rgba(35, 69, 96, 0.9);
     padding: 30px 50px;
-    border-radius: 20px;
+    border-radius: 15px;
     max-width: 1024px;
 
     .returning-user {
@@ -63,6 +65,7 @@ body {
             height: 30px;
             line-height: 30px;
             width: 100%;
+            margin: 5px 0;
           }
         }
 
@@ -103,7 +106,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        // padding-left: 30px;
 
         h2 {
           margin-bottom: 20px;
@@ -135,6 +137,7 @@ body {
             height: 30px;
             line-height: 30px;
             width: 100%;
+            margin: 5px 0;
           }
         }
 

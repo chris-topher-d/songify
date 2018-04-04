@@ -8,14 +8,12 @@
     $term = "";
   }
 
-?>
-
-<!-- if search field is empty, no results are shown -->
-<?php
+  // if search field is empty, no results are shown
   if ($term === "") {
     echo "<h2>No results</h2>";
     exit();
   }
+
 ?>
 
 <script>
@@ -27,7 +25,7 @@
 
 <div class="tracks-container">
   <ul class="track-list">
-    <h2 style="padding: 20px 0; margin: 0;">Tracks</h2>
+    <h2>Tracks</h2>
 
     <?php
 
@@ -100,7 +98,7 @@
   ?>
 </div>
 <div class="album-results">
-  <h2 class="album-results-title">Albums</h2>
+  <h2>Albums</h2>
   <div class='albums'>
     <?php
 

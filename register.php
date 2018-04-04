@@ -39,7 +39,7 @@
               </script>';
       }
     ?>
-
+    
     <div class='container'>
       <div class='info'>
         <div class="returning-user">

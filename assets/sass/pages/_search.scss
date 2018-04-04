@@ -1,36 +1,20 @@
-.search-container {
-  background: #242424;
-  padding: 20px 20px;
-
-  h4 {
-    margin: 0;
-    font-weight: 300;
-
-  }
-
-  .search-input {
-    width: 100%;
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-weight: 700;
-    font-size: 60px;
-    letter-spacing: 2px;
-
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
 .tracks-container {
   display: flex;
   width: 100%;
-  padding: 30px 0 10px 0;
+  padding: 0 0 0 0;
+  letter-spacing: 1px;
 
   .track-list {
     width: 100%;
-    padding: 0;
+    padding-bottom: 30px;
+
+    h2 {
+      margin: 40px 15px 20px 15px !important;
+    }
+
+    .no-results {
+      padding: 0 0 0 15px;
+    }
 
     .track-list-row {
       display: inline-grid;
@@ -117,15 +101,17 @@
   padding-bottom: 30px;
   border-top: 1px solid #909090;
   border-bottom: 1px solid #909090;
+  letter-spacing: 1px;
 
   h2 {
-    padding: 30px 0 20px 0;
-    margin: 0;
+  }
+
+  .no-results {
+    padding: 0 0 0 15px;
   }
 
   .artist-result-row {
-    padding: 15px 10px;
-    letter-spacing: 1px;
+    padding: 15px 15px;
     cursor: pointer;
 
     &:hover {
@@ -148,15 +134,19 @@
 }
 
 .album-results {
+  padding-bottom: 30px;
+  letter-spacing: 1px;
 
-  .album-results-title {
-    padding: 30px 0 20px 0;
-    margin: 0;
+  h2 {
   }
 
   .albums {
     display: flex;
     flex-wrap: wrap;
+
+    .no-results {
+      padding: 0 0 0 15px;
+    }
 
     .grid-item {
       display: inline-block;
@@ -175,7 +165,6 @@
         .grid-item-info {
           font-size: 15px;
           font-weight: 300;
-          letter-spacing: 1px;
           margin-top: 5px;
           text-overflow: ellipsis;
           overflow: hidden;
