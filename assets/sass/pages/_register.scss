@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #222;
+  background: url('../images/concert_audience.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+
+  .info {
+    display: flex;
+    align-items: center;
+    background: rgba(35, 69, 96, 0.9);
+    padding: 30px 50px;
+    border-radius: 15px;
+    max-width: 1024px;
+
+    .login-text {
+      padding-left: 50px;
+
+      .logo-name {
+        display: flex;
+        align-items: center;
+
+        .fa-headphones {
+          color: #fff;
+          font-size: 50px;
+          padding-right: 15px;
+        }
+
+        h1 {
+          color: #07d159;
+          font-size: 60px;
+          font-weight: bold;
+        }
+      }
+
+      h2 {
+        margin: 25px 0;
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          font-size: 20px;
+          list-style: none;
+          padding: 5px 10px;
+
+          .fa-check {
+            color: #07d159;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

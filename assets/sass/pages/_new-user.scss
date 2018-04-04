@@ -1,0 +1,75 @@
+.new-user {
+  display: none;
+
+  .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      padding: 5px 10px;
+      width: 100%;
+
+      .errorMsg {
+        display: block;
+        color: #07d159;
+        font-size: 13px;
+      }
+
+      label {
+        display: block;
+        color: #999;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+
+      input {
+        display: block;
+        background: transparent;
+        color: #fff;
+        border: 0;
+        border-bottom: 1px solid #fff;;
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+        margin: 5px 0;
+
+        &::placeholder {
+          color: #909090;
+        }
+      }
+    }
+
+    button {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 200px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      padding: 10px 15px;
+      margin: 20px 0;
+      width: 100%;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        background: #fff;
+        color: #234560;
+        border: 1px solid #234560;
+      }
+    }
+
+    .new-account {
+      #hide-register {
+        color: #fff;
+        font-size: 13px;
+        cursor: pointer;
+      }
+    }
+  }
+}
