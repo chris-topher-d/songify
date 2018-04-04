@@ -96,9 +96,6 @@
     }
 
     let trackToPlay = shuffle ? shuffledPlaylist[currentIndex] : currentPlaylist[currentIndex];
-    /* console.log(currentPlaylist);
-    console.log(currentIndex);
-    console.log(currentPlaylist[currentIndex]); */
     setTrack(trackToPlay, currentPlaylist, true);
   }
 
